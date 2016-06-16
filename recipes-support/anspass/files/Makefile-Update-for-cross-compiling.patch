@@ -1,0 +1,52 @@
+From 73c9743779bc37e8cbcb8bfa5c0b8f2aff3448e8 Mon Sep 17 00:00:00 2001
+From: Wenzong Fan <wenzong.fan@windriver.com>
+Date: Wed, 15 Jun 2016 23:01:11 -0400
+Subject: [PATCH] Makefile: Update for cross-compiling
+
+Upstream-Status: Pending
+
+Signed-off-by: Wenzong Fan <wenzong.fan@windriver.com>
+---
+ Makefile | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 410710f..89d3999 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,6 +1,12 @@
+-CC=gcc
+-CFLAGS=-Wall -g3 -O2
+-LDFLAGS=-lgcrypt
++CC ?= gcc
++CFLAGS ?=
++LDFLAGS ?=
++EXTRA_CFLAGS = -Wall -g3 -O2
++EXTRA_LDFLAGS = -lgcrypt
++
++DESTDIR ?=
++bindir ?= /usr/bin
++sbindir ?= /usr/sbin
+ 
+ CODE=$(wildcard *.c)
+ 
+@@ -13,11 +19,14 @@ BINS=$(patsubst %.c,%,$(SRC))
+ all: $(OBJS) $(BINS)
+ 
+ $(BINS): % : %.h $(OBJS)
+-	$(CC) $(CFLAGS) -o $@  $@.c $(OBJS) $(LDFLAGS)
++	$(CC) $(CFLAGS) $(EXTRA_CFLAGS) -o $@  $@.c $(OBJS) $(LDFLAGS) $(EXTRA_LDFLAGS)
+ 
+ $(OBJS): %.o : %.h
+-	$(CC) $(CFLAGS) -c -fPIC -o $@ $(patsubst %.o,%.c,$@)
++	$(CC) $(CFLAGS) $(EXTRA_CFLAGS) -c -fPIC -o $@ $(patsubst %.o,%.c,$@)
+ 
++install: all
++	-@if [ ! -d $(DESTDIR)$(bindir) ]; then mkdir -p $(DESTDIR)$(bindir); fi
++	cp $(BINS) $(DESTDIR)$(bindir)
+ 
+ .PHONY: clean
+ clean:
+-- 
+2.8.1
+
