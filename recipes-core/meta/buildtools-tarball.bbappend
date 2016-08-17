@@ -11,6 +11,9 @@ TOOLCHAIN_HOST_TASK += \
       nativesdk-libgcc \
      "
 
+# use anspass to save and retrieve credentials
+TOOLCHAIN_HOST_TASK += "nativesdk-anspass"
+
 SDK_POSTPROCESS_COMMAND_prepend = "gen_buildtools_delete_target ;"
 
 gen_buildtools_delete_target() {
