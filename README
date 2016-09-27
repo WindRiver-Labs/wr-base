@@ -7,8 +7,20 @@ is required by most other layers provided by Wind River.
 
 Dependencies
 ------------
-This layer depends on the oe-core version supplied with Wind River Linux.
-It is also recommended that it be used with the wrlcompat and wrlinux layers.
+This layer depends on the following layers:
+
+  openembedded-core
+  meta-perl
+  meta-initramfs
+  meta-python
+  meta-networking
+  meta-oe
+  meta-webserver
+  wr-template
+
+The layer also recommends the following layers:
+  wrlinux
+  wr-base-dl
 
 
 Maintenance
@@ -20,13 +32,12 @@ information on submitting changes.
 
 Building the wr-base layer
 -----------------------------------
-This layer should be added to the bblayers.conf file.  This is done
-automatically when using the Wind River configure wrapper.
+This layer should be added to the bblayers.conf file.
 
 
 License
 -------
-Copyright (C) 2012-2013 Wind River Systems, Inc.
+Copyright (C) 2012-2016 Wind River Systems, Inc.
 
 Source code included in the tree for individual recipes is under the LICENSE
 stated in the associated recipe (.bb file) unless otherwise stated.
