@@ -1,0 +1,45 @@
+From 0154b6046f254c6027e4281569a07f6c696af19f Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 1 Aug 2016 05:27:35 -0400
+Subject: [PATCH] fix No GNU_HASH in the elf binary
+
+Let recipe's LDFLAGS work in Makefile which fixes
+No GNU_HASH QA warning.
+
+Upstream-Status: Inappropriate [embedded specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+---
+ kpartx/Makefile          | 2 +-
+ libmpathpersist/Makefile | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/kpartx/Makefile b/kpartx/Makefile
+index 24bdabc..ed5a93d 100644
+--- a/kpartx/Makefile
++++ b/kpartx/Makefile
+@@ -6,7 +6,7 @@ include ../Makefile.inc
+ 
+ CFLAGS += -I. -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DLIBDM_API_COOKIE
+ 
+-LDFLAGS = -ldevmapper
++LDFLAGS += -ldevmapper
+ OBJS = bsd.o dos.o kpartx.o solaris.o unixware.o dasd.o sun.o \
+        gpt.o mac.o crc32.o lopart.o xstrncpy.o devmapper.o
+ EXEC = kpartx
+diff --git a/libmpathpersist/Makefile b/libmpathpersist/Makefile
+index 3cd8702..f0edf8c 100644
+--- a/libmpathpersist/Makefile
++++ b/libmpathpersist/Makefile
+@@ -20,7 +20,7 @@ all: $(LIBS)
+ 
+ $(LIBS): 
+ 	$(CC) -Wall -fPIC -c $(CFLAGS) *.c 
+-	$(CC)  -shared $(LIBDEPS) -Wl,-soname=$@ $(CFLAGS) -o $@ $(OBJS)
++	$(CC)  -shared $(LIBDEPS) -Wl,-soname=$@ $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+ 	ln -s $(LIBS) $(DEVLIB)
+ 	$(GZIP) mpath_persistent_reserve_in.3 > mpath_persistent_reserve_in.3.gz	
+ 	$(GZIP) mpath_persistent_reserve_out.3 > mpath_persistent_reserve_out.3.gz	
+-- 
+2.8.1
+
