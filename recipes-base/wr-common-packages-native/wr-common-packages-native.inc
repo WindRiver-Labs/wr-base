@@ -97,6 +97,7 @@ DEPENDS = "\
     m4-native \
     makedepend-native \
     makedevs-native \
+    mkfontdir-native \
     mkfontscale-native \
     mpfr-native \
     mtools-native \
