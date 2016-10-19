@@ -27,3 +27,16 @@ EXTRA_IMAGEDEPENDS += "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPLv3', '',
 EXTRA_IMAGEDEPENDS += "glibc-locale"
 
 EXTRA_IMAGEDEPENDS += "btrfs-tools"
+
+IMAGE_POSTPROCESS_COMMAND_append = " emit_image_env;"
+
+python emit_image_env () {
+    localdata = bb.data.createCopy(d)
+
+    # Export DISTRO for installer build
+    localdata.setVarFlag("DISTRO", "unexport", "")
+
+    dumpfile = d.expand("${T}/target_image_env")
+    with open(dumpfile , "w") as f:
+        bb.data.emit_env(f, localdata, True)
+}
