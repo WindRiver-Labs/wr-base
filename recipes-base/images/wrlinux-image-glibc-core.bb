@@ -9,7 +9,6 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
 
 PR = "r2"
 
-inherit wrlinux-image
 
 IMAGE_INSTALL = " \
     packagegroup-wr-boot \
@@ -17,5 +16,7 @@ IMAGE_INSTALL = " \
     packagegroup-wr-base-net \
     ${@bb.utils.contains('IMAGE_ENABLE_CONTAINER', '1', '', 'kernel-modules', d)} \
 "
+
+inherit wrlinux-image
 
 NO_RECOMMENDATIONS = "1"

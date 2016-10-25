@@ -7,10 +7,10 @@ LICENSE = "MIT"
 
 PR = "r0"
 
-inherit wrlinux-image
-
 # We override what gets set in core-image.bbclass
 #
 IMAGE_INSTALL = "\
     packagegroup-wr-tiny \
     "
+
+inherit wrlinux-image
