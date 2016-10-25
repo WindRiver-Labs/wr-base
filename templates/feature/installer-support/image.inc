@@ -20,13 +20,17 @@ IMAGE_INSTALL += "dracut"
 
 IMAGE_INSTALL += "cryptsetup"
 
-# Conditionally to build grub-efi for target image.
-# And anaconda installer decides to install it or not.
-EXTRA_IMAGEDEPENDS += "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPLv3', '', 'grub-efi', d)}"
+# The grub-mkconfig requires them to generate target grub.cfg
+IMAGE_INSTALL += "sed grep"
+
+# The blevet requires them for EFI.
+IMAGE_INSTALL += "dosfstools e2fsprogs"
+IMAGE_INSTALL += "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPLv3', '', 'grub-efi', d)}"
+
+# The btrfs partition requires it
+IMAGE_INSTALL += "btrfs-tools"
 
 EXTRA_IMAGEDEPENDS += "glibc-locale"
-
-EXTRA_IMAGEDEPENDS += "btrfs-tools"
 
 IMAGE_POSTPROCESS_COMMAND_append = " emit_image_env;"
 
