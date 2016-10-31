@@ -32,6 +32,9 @@ IMAGE_INSTALL += "btrfs-tools"
 
 EXTRA_IMAGEDEPENDS += "glibc-locale"
 
+# Generate filesystem images for image copy install
+IMAGE_FSTYPES += "ext4"
+
 IMAGE_POSTPROCESS_COMMAND_append = " emit_image_env;"
 
 python emit_image_env () {
