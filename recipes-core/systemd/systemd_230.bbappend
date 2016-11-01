@@ -4,10 +4,6 @@
 # LOCAL REV: add WR specific scripts
 #
 
-do_install_append() {
-    ln -sf /dev/null  ${D}${sysconfdir}/udev/rules.d/80-net-setup-link.rules
-}
-
 PACKAGECONFIG_append = " networkd"
 
 DEPENDS += "systemd-systemctl-native"
@@ -20,6 +16,9 @@ SYSTEMD_DISABLED_SERVICES = " \
 "
 
 pkg_postinst_${PN}_append() {
+
+ln -sf /dev/null $D${sysconfdir}/udev/rules.d/80-net-setup-link.rules
+
 container_enable=${@bb.utils.contains('IMAGE_ENABLE_CONTAINER', '1', 'Yes', 'No', d)}
 
 if [ X"${container_enable}" = "XYes" ]; then
