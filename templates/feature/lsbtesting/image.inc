@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 Wind River Systems, Inc.
+# Copyright (C) 2013 - 2016 Wind River Systems, Inc.
 #
 
 # Some recipes in oe-core contain this distro override
@@ -17,20 +17,10 @@ IMAGE_FEATURES += "wr-core-lsb-more wr-core-lsb-graphics-plus"
 
 # add missing packages into build as required by LSB
 
-# Qt-related packages
-IMAGE_INSTALL += "libqtgui4"
-IMAGE_INSTALL += "libqtsql4"
-IMAGE_INSTALL += "libqtsvg4"
-IMAGE_INSTALL += "libqtopengl4"
-IMAGE_INSTALL += "libqtxml4"
-IMAGE_INSTALL += "libqtnetwork4"
-IMAGE_INSTALL += "libqtcore4"
-IMAGE_INSTALL += "libqt3support4"
-
 # Misc libraries and packages
 IMAGE_INSTALL += "libxi"
 IMAGE_INSTALL += "libglu"
-IMAGE_INSTALL += "jpeg jpeg-dev"
+IMAGE_INSTALL += "libjpeg-turbo libjpeg-turbo-dev"
 IMAGE_INSTALL += "gdk-pixbuf gdk-pixbuf-dev"
 IMAGE_INSTALL += "foomatic-filters cups ghostscript"
 IMAGE_INSTALL += "cups-lib cups-libimage"
@@ -93,10 +83,6 @@ IMAGE_INSTALL += "rpm-common"
 IMAGE_INSTALL += "sudo"
 IMAGE_INSTALL += "tcp-wrappers"
 IMAGE_INSTALL += "util-linux-uuidgen"
-
-# add the external meta-qt3 library
-IMAGE_INSTALL += "libqt-mt3"
-
 IMAGE_INSTALL += "libpng12"
 IMAGE_INSTALL += "nss"
 IMAGE_INSTALL += "nspr"
