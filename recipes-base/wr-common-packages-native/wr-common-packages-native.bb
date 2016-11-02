@@ -76,14 +76,3 @@ do_deploy_sstate () {
 
 do_deploy_sstate[deptask] += "do_populate_lic do_package_qa do_populate_sysroot"
 addtask deploy_sstate
-
-# Create the symlink in the export directory
-do_deploy_sstate[postfuncs] += "wrl_host_tools_symlink"
-
-python wrl_host_tools_symlink (){
-    target = d.getVar('NATIVE_SS_OUTPUT', True)
-    wrlexport = d.getVar('WRL_EXPORT_DIR', True)
-    buildarch = d.getVar('BUILD_ARCH', True)
-    link = "%s/host-tools-%s.tar.gz" % (wrlexport, buildarch)
-    wrl_symlink(target, link, d)
-}
