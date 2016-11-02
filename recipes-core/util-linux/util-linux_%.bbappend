@@ -1,8 +1,6 @@
 #
 # Copyright (C) 2012-2013 Wind River Systems, Inc.
 #
-# LOCAL REV: WR specific simics related patches
-#
 # In openembedded upstream recipe hwclock's priority is set to 10
 # problem happens on nslu2
 # we don't support this board, change it back to normal
@@ -11,7 +9,5 @@ ALTERNATIVE_PRIORITY[hwclock] = "100"
 
 #include util-linux-agetty too
 RRECOMMENDS_${PN} += " util-linux-agetty"
-
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 BBCLASSEXTEND = "native nativesdk"
