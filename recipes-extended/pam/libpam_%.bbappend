@@ -16,6 +16,7 @@ SRC_URI += "http://pkgs.fedoraproject.org/repo/pkgs/pam/pam-redhat-0.99.11.tar.b
 SRC_URI[redhat.md5sum] = "29eab110f57e8d60471081a6278a5a92"
 SRC_URI[redhat.sha256sum] = "82bd4dc8c79d980bfc8421908e7562a63f0c65cc61152e2b73dcfb97dbf1681b"
 
+EXTRA_OEMAKE_append = " LOCKDIR=${localstatedir}/run/console"
 
 # If necessary, move pam-redhat modules to where they will be built.
 # We create a local function and use sh.
