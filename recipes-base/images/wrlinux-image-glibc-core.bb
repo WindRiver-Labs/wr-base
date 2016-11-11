@@ -19,4 +19,4 @@ IMAGE_INSTALL = " \
 
 inherit wrlinux-image
 
-NO_RECOMMENDATIONS = "1"
+NO_RECOMMENDATIONS_task-rootfs = "1"
