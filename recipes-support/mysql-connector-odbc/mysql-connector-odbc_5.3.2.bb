@@ -53,16 +53,16 @@ do_install_append(){
     mv ${D}${datadir}/doc/mysql-connector-odbc/bin/*  ${D}${bindir}
     rm -rf ${D}${datadir}/doc/mysql-connector-odbc/bin/
 
-    if ${@bb.utils.contains('DISTRO_FEATURES','ptest','true','false',d)}; then
-        install -d ${D}${PTEST_PATH}/test
-        install ${WORKDIR}/run-ptest ${D}${PTEST_PATH}
-        mv ${D}${datadir}/doc/mysql-connector-odbc/test/* ${D}${PTEST_PATH}/test
-        sed -i "s:${B}/lib/:${libdir}/:g" ${D}${PTEST_PATH}/test/*.ini
+    if ! ${@bb.utils.contains('DISTRO_FEATURES','ptest','true','false',d)}; then
+        rm -rf ${D}${datadir}/doc/mysql-connector-odbc/test
     fi
-    rm -rf ${D}${datadir}/doc/mysql-connector-odbc/test
 }
-do_install_ptest_base(){
+
+do_install_ptest() {
+    mv ${D}${datadir}/doc/mysql-connector-odbc/test ${D}${PTEST_PATH}
+    sed -i "s:${B}/lib/:${libdir}/:g" ${D}${PTEST_PATH}/test/*.ini
 }
+
 FILES_${PN} += "${libdir}/libmyodbc5*"
 FILES_${PN}-dev = ""
 FILES_${PN}-dbg += "${libdir}/${BPN}/test/.debug"
