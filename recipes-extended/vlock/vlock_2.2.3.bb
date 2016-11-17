@@ -4,7 +4,7 @@ SECTION = "utils"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a17cb0a873d252440acfdf9b3d0e7fbf"
 
-DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES', 'pam', 'libpam', '', d)}"
+DEPENDS += "libpam"
 
 SRC_URI = "${GENTOO_MIRROR}/${BPN}-${PV}.tar.gz \
 	   file://vlock_pam_tally2_reset.patch \
