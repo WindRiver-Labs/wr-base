@@ -41,7 +41,7 @@ BUSYBOX_REPLACE_PACKAGES ??= "\
     util-linux \
     util-linux-mount \
     vim-tiny \
-    wget \
+    ${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPLv3', '', 'wget', d)} \
     "
 
 RDEPENDS_${PN} = "${BUSYBOX_REPLACE_PACKAGES}"
