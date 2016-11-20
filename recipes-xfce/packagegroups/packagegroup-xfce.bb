@@ -3,10 +3,7 @@ SECTION = "x11/wm"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690"
 
-inherit packagegroup distro_features_check
-
-# rdpends on xfce packages that need x11
-REQUIRED_DISTRO_FEATURES = "x11"
+inherit packagegroup
 
 # mandatory
 RDEPENDS_${PN} = " \
