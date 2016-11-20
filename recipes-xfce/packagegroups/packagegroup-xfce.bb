@@ -34,7 +34,7 @@ RRECOMMENDS_${PN} = " \
     xfce4-places-plugin \
     xfce4-power-manager \
     xfce4-powermanager-plugin \
-    xfce4-pulseaudio-plugin \
+    xfce4-mixer \
     xfce4-screenshooter \
     xfce4-systemload-plugin \
     xfce4-taskmanager \
