@@ -23,10 +23,6 @@ S = "${WORKDIR}"
 # there maybe more in the future.
 DEFAULT_WALLPAPER ?= "gray"
 
-inherit distro_features_check
-
-REQUIRED_DISTRO_FEATURES = "x11"
-
 do_install() {
 	install -d ${D}${datadir}/backgrounds/Windriver/
 	install -m 0644 ${WORKDIR}/wallpapers/* ${D}/${datadir}/backgrounds/Windriver/
