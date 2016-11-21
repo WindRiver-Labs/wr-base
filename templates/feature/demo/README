@@ -2,8 +2,6 @@ This template adds demo packages, oe-core debugging packages.
 
 To use, add
 
---with-template=feature/demo
+--templates feature/demo
 
-as a configure option, or
-
---enable-rootfs=glibc_(small|std)+demo
+as a setup option.

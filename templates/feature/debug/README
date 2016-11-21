@@ -2,8 +2,6 @@ This template adds oe-core debugging packages.
 
 To use, add
 
---with-template=feature/debug
+--templates feature/debug
 
-as a configure option, or
-
---enable-rootfs=glibc_(small|std)+debug
+as a setup option.

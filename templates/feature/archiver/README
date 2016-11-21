@@ -24,15 +24,15 @@ archive for the sources of:
     COPYLEFT_RECIPE_TYPES = 'target'
 
 Example:
-1. To use this template, add "--with-template=feature/archiver" to your
-   configure options:
-$ wrlinux-x/wrlinux/configure --enable-board=qemux86-64 \
- --enable-rootfs=glibc_cgl --enable-kernel=cgl \
- --enable-unsupported-config=yes --enable-parallel-pkgbuilds=8 \
- --enable-jobs=8 --with-template=feature/archiver
+1. To use this template, add "--templates feature/archiver" to your
+   setup options:
+$ wrlinux-x/setup.sh --machine qemux86-64 \
+ --kernel standard \
+ --templates feature/archiver
+$ add PARALLEL_MAKE = "-j 8" to local.conf
 
 2. Build a package, such as 'bash':
-$ make -C build bash
+$ bitbake bash
 
 3. The result is copyed to export/sources or tmp/deploy/sources dir:
 $ ls export/sources/x86_64-wrs-linux/bash-4.2-r7/ -al
@@ -62,7 +62,7 @@ drwxrwxr-x 3 jiahongxu jiahongxu    4096 May 18 18:34 ..
    ARCHIVER_MODE[diff] = "1" to local.conf
 
 5. Rebuild 'bash':
-$ make -C build bash.cleansstate; make -C build bash
+$ bitbake bash -ccleansstate && bitbake bash
 
 6. Check result:
 $ ls export/sources/x86_64-wrs-linux/bash-4.2-r7/ -al

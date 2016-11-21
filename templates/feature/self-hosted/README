@@ -6,6 +6,6 @@ It is supported for x86 and x86-64 targets only.
 
 To use, add
 
---with-template=feature/self-hosted
+--templates feature/self-hosted
 
-as a configure option.
+as a setup option.

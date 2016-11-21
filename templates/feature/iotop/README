@@ -6,6 +6,6 @@ CONFIG_TASK_IO_ACCOUNTING=y
 
 To use, add
 
---with-template=feature/iotop
+--templates feature/iotop
 
-as a configure option.
+as a setup option.

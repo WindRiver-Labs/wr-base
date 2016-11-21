@@ -2,9 +2,9 @@ This template adds phoronix-test-suite packages.
 
 To use, add
 
---with-template=feature/pts
+--templates feature/pts
 
-as a configure option.  The template adds the test suite to the file system
+as a setup option.  The template adds the test suite to the file system
 and also adds the target-toolchain feature so that tests can be compiled
 on the target.
 

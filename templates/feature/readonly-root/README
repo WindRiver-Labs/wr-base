@@ -7,7 +7,7 @@ updated by hand to work with a read-only root filesystem.
 
 To use, add
 
---with-template=feature/readonly-root
+--templates feature/readonly-root
 
-as a configure option.
+as a setup option.
 

@@ -2,12 +2,7 @@ This template adds acl as a distro feature.
 
 To use, add it as a template:
 
-  --with-template=feature/acl
-
-or, directly to the rootfs:
-
-  --enable-rootfs=glibc-std+acl
-
+  --templates feature/acl
 
 If you want packages to support acl you should check that
 it is a distro feature.  These packages do that:

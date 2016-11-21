@@ -2,7 +2,7 @@ This template adds benchmark packages.
 
 To use, add
 
---with-template=feature/benchmark
+--templates feature/benchmark
 
-as a configure option
+as a setup option
 

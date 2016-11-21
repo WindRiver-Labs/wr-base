@@ -4,9 +4,9 @@ hanging on graphic console on remote servers.
 
 To enable it, add
 
---with-template=feature/qemu-sdl
+--templates feature/qemu-sdl
 
-as a configure option.
+as a setup option.
 
 As a known issue, SLED 11 servers cannot build qemu-native with this template
 enabled. The root cause is that SLED 11 has old and broken libxcb-xlib. So

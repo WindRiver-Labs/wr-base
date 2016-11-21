@@ -4,6 +4,6 @@ the target which links to libraries on the target.
 
 To use, add
 
---with-template=feature/dev-pkgs
+--templates feature/dev-pkgs
 
-as a configure option.
+as a setup option.

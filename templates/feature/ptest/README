@@ -4,14 +4,8 @@ ptest-runner package, used for running the full ptest suite.
 
 To use, add
 
---with-template=feature/ptest
+--templates feature/ptest
 
-as a configure option, or
-
---enable-test
-
-As --enable-test implies the inclusion of feature/ptest
-
-
+as a setup option.
 
 The scripts/ subdirectory contains ptest-related tools.
