@@ -8,7 +8,6 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=3b83ef96387f14655fc854ddc3c6bd57"
 S = "${WORKDIR}/trunk/"
 
 SECTION = "tools"
-PR = "r0"
 
 # Update SRC_URI and move sgabios tarball to ${LAYERDIR}/downloads
 SRC_URI = "svn://sgabios.googlecode.com/svn;module=trunk;rev=8;protocol=http"

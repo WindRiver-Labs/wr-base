@@ -16,8 +16,6 @@ users would be able to access different devices."
 
 HOMEPAGE = "http://www.garloff.de/kurt/linux/scsidev/"
 
-PR = "r0"
-
 LICENSE = "GPLv2"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=15fac19769be7c6091cda2f70757f064"

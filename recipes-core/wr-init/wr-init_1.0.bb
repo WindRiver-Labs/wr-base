@@ -5,8 +5,6 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d
 SRC_URI = "file://rc.local.example \
            file://rcinit" 
 
-PR = "r0"
-
 S = "${WORKDIR}"
 
 inherit update-rc.d

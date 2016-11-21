@@ -15,8 +15,6 @@ SRC_URI = "http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-${P
            file://fix-system-call-number.patch \
           "
 
-PR = 'r0'
-
 inherit autotools-brokensep
 
 

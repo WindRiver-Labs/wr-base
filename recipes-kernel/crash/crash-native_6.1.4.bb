@@ -3,7 +3,6 @@
 #
 include crash.inc
 
-PR = "r0"
 BPN = "crash"
 
 SRC_URI[md5sum] = "ef154b618e19d968956e4010068e916a"
