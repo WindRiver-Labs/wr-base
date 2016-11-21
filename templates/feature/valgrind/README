@@ -1,0 +1,19 @@
+Valgrind Template
+=================
+
+This template adds the valgrind tool to the filesystem.
+
+Wind River Linux Integration notes.
+
+To add valgrind, add feature/valgrind to your configure line,
+	--with-template=feature/valgrind
+or with another template, for example, the analysis template:
+	--with-template=feature/analysis,feature/valgrind.
+
+The Wind River Workbench supports a visualization plugin for the
+following subset of valgrind tools:
+	- memcheck
+	- massif
+	- helgrind
+	- cachegrind
+
