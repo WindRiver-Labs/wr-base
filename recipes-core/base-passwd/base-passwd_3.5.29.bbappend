@@ -1,14 +1,7 @@
 #
-# Copyright (C) 2012 Wind River Systems, Inc.
+# Copyright (C) 2012, 2016 Wind River Systems, Inc.
 #
-# LOCAL REV: WR specific home directory and passwd for root
+# Remove this bbappend after the recipe is upgraded.
 #
-# optionally set root password to root
 #
-
 PR .= ".1"
-
-FILESEXTRAPATHS_prepend := "${THISDIR}:"
-
-SRC_URI += "${@bb.utils.contains('DISTRO_FEATURES', 'empty-root-password', '', \
-              'file://passwd_master.patch',d)}"
