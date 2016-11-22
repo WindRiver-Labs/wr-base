@@ -20,6 +20,8 @@ IMAGE_LINGUAS = ""
 LICENSE = "MIT"
 
 IMAGE_FSTYPES = "${INITRAMFS_FSTYPES}"
+QB_DEFAULT_FSTYPE = "cpio.gz"
+
 inherit wrlinux-image
 
 IMAGE_ROOTFS_SIZE = "8192"
