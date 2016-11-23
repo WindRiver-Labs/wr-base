@@ -14,7 +14,9 @@ EXTRA_OEMAKE = "'CC=${CC}'"
 SRCREV = "e6c9d3d996bd55e7ab14dbd74deb7841e0c3a4f1"
 PV = "1.96+git${SRCPV}"
 
-SRC_URI += "git://git.kernel.org/pub/scm/utils/kernel/kgdb/agent-proxy.git;protocol=git"
+SRC_URI = "git://git.kernel.org/pub/scm/utils/kernel/kgdb/agent-proxy.git;protocol=git \
+           file://0001-Makefile-Add-LDFLAGS-variable.patch \
+"
 
 BBCLASSEXTEND = "native nativesdk"
 
