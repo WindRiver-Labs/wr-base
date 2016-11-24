@@ -3,12 +3,10 @@ system-stats
 
 This template adds the System and process monitoring utilities.
 
-To use ir, add
+To use it, add
 
---with-template=feature/system-stats
+--templates feature/system-stats
 
-as a configure option, or
-
---enable-rootfs=glibc_(small|std)+system-stats
+as a setup.sh option.
 
 See the template configuration file for the list of packages included with this feature.
