@@ -15,7 +15,7 @@ SRC_URI = "git://github.com/WindRiver-OpenSourceLabs/anspass \
            file://Makefile-Update-for-cross-compiling.patch \
 "
 
-SRCREV = "f9f170e17486135830ebcb902423fd5ea4fbaeb3"
+SRCREV = "b9694b09866fab6784a4e60cafda71132cef29dd"
 
 inherit autotools-brokensep
 
