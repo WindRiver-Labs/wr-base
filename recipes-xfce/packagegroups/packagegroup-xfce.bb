@@ -8,6 +8,9 @@ inherit packagegroup distro_features_check
 # rdpends on xfce packages that need x11
 REQUIRED_DISTRO_FEATURES = "x11"
 
+# mozjs can NOT be built on mips64
+COMPATIBLE_HOST = "^(?!mips64).*"
+
 # mandatory
 RDEPENDS_${PN} = " \
     packagegroup-xfce-base \
