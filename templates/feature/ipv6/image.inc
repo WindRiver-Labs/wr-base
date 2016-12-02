@@ -1,2 +1,2 @@
-IMAGE_INSTALL += "nc6"
+IMAGE_INSTALL += "netcat-openbsd"
 IMAGE_INSTALL += "ipsec-tools"
