@@ -11,11 +11,13 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=4fbd65380cdd255951079008b364516c"
 
 DEPENDS = "libgcrypt"
 
-SRC_URI = "git://github.com/WindRiver-OpenSourceLabs/anspass \
-           file://Makefile-Update-for-cross-compiling.patch \
-"
+SRC_URI = "git://github.com/WindRiver-OpenSourceLabs/anspass"
 
-SRCREV = "2060077626efafeda41b2f1c678dd5bb89708d0c"
+SRCREV = "41b8698321d6e859c0beda8efd7891c4c52bbcc6"
+
+PV = "1.0+git${SRCPV}"
+
+LDFLAGS_append = " -lgcrypt"
 
 inherit autotools-brokensep
 
