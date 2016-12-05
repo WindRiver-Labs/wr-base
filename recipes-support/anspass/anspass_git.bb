@@ -17,7 +17,7 @@ SRCREV = "41b8698321d6e859c0beda8efd7891c4c52bbcc6"
 
 PV = "1.0+git${SRCPV}"
 
-LDFLAGS_append = " -lgcrypt"
+CFLAGS_append = " -lgcrypt"
 
 inherit autotools-brokensep
 
