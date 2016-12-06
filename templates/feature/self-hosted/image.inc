@@ -1,4 +1,4 @@
-IMAGE_INSTALL += "packagegroup-wr-self-hosted"
+IMAGE_INSTALL += "packagegroup-self-hosted"
 # pseudo needs extra stuff to support the 32-bit toolchain binaries.
 IMAGE_INSTALL_append_x86-64 = " \
 	lib32-glibc \
