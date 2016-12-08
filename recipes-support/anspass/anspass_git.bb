@@ -13,11 +13,9 @@ DEPENDS = "libgcrypt"
 
 SRC_URI = "git://github.com/WindRiver-OpenSourceLabs/anspass"
 
-SRCREV = "41b8698321d6e859c0beda8efd7891c4c52bbcc6"
+SRCREV = "6bfb285bc5d80b5b53d3edfee5a512554150eb0f"
 
 PV = "1.0+git${SRCPV}"
-
-CFLAGS_append = " -lgcrypt"
 
 inherit autotools-brokensep
 
