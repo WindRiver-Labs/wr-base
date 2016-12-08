@@ -5,7 +5,7 @@ SECTION = "console/utils"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI = "http://logwarn.googlecode.com/files/logwarn-${PV}.tar.gz \
+SRC_URI = "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/logwarn/logwarn-${PV}.tar.gz \
            file://check_logwarn-script-has-bashism-so-use-bash.patch"
 
 SRC_URI[md5sum] = "bfe56260658dd8a69cb1f5286012c963"
