@@ -37,6 +37,7 @@ PATCHRESOLVE = "noop"
 
 # Workaround
 INSTALLER_TARGET_BUILD = "/dummy"
+BB_NO_NETWORK = "1"
 
 EOF
 bitbake -g $4
