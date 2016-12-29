@@ -10,7 +10,7 @@ SRC_URI += "git://git.fedorahosted.org/git/microcode_ctl;protocol=git \
             file://fix-No-GNU_HASH-in-the-elf-binary.patch \
 	   "
 
-SRCREV = "ad1238f26ca54ffb2e1a19d53edfc8e0cea07416"
+SRCREV = "7164e0e34c547c01b4178af38d5f42e530325211"
 
 PV = "v2.1-9+git${SRCREV}"
 
