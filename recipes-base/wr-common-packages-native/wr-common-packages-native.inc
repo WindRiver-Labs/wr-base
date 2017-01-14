@@ -14,6 +14,7 @@ DEPENDS = "\
     binutils-native \
     bison-native \
     bjam-native \
+    bmap-tools-native \
     byacc-native \
     bzip2-native \
     ca-certificates-native \
@@ -135,6 +136,7 @@ DEPENDS = "\
     pseudo-native \
     python-native \
     python-scons-native \
+    python-setuptools-native \
     python-smartpm-native \
     python3-native \
     qemu-helper-native \
