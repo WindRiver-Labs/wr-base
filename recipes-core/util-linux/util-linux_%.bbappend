@@ -10,4 +10,6 @@ ALTERNATIVE_PRIORITY[hwclock] = "100"
 #include util-linux-agetty too
 RRECOMMENDS_${PN} += " util-linux-agetty"
 
+EXTRA_OECONF_class-native += " --disable-schedutils"
+
 BBCLASSEXTEND = "native nativesdk"
