@@ -35,7 +35,6 @@ BUSYBOX_REPLACE_PACKAGES ??= "\
     patch \
     procps \
     psmisc \
-    sysklogd \
     unzip \
     usleep \
     util-linux \
