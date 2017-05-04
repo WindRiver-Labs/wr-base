@@ -47,7 +47,7 @@ bitbake -g $4
 # Crude parsing of output from setup.sh --list-machines
 #
 list_machines () {
-$wrlinux_dir/setup.sh --list-machines | while read item1 restofline; do
+$wrlinux_dir/setup.sh --list-machines --accept-eula=yes | while read item1 restofline; do
   case $item1 in
     ---*) seen=1
           continue
