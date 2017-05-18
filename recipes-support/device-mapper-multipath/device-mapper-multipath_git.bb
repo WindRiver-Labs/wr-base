@@ -22,7 +22,7 @@ and deletion"
 
 HOMEPAGE = "http://christophe.varoqui.free.fr/"
 
-DEPENDS = "ncurses readline libaio lvm2 sysfsutils udev"
+DEPENDS = "ncurses readline libaio libdevmapper sysfsutils udev"
 
 LICENSE = "GPLv2.0"
 
