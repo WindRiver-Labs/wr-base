@@ -2,7 +2,7 @@
 # Copyright (C) 2014 Wind River Systems, Inc.
 #
 SUMMARY = "Microcode Control Tool"
-HOMEPAGE = "https://fedorahosted.org/microcode_ctl/"
+HOMEPAGE = "https://pagure.io/microcode_ctl/"
 SECTION = "console/utils"
 
 LICENSE = "GPLv2"

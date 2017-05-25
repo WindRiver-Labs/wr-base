@@ -3,7 +3,7 @@
 #
 require ${BPN}.inc
 
-SRC_URI += "git://git.fedorahosted.org/git/microcode_ctl;protocol=git \
+SRC_URI += "git://pagure.io/microcode_ctl.git;protocol=https \
 	    file://0001-add-the-WRLinux-release-support.patch \
             file://microcode_ctl.service \
             file://0001-fix-the-help-return-code.patch \
