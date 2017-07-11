@@ -10,7 +10,7 @@ SRC_URI += "git://pagure.io/microcode_ctl.git;protocol=https \
             file://fix-No-GNU_HASH-in-the-elf-binary.patch \
 	   "
 
-SRCREV = "7164e0e34c547c01b4178af38d5f42e530325211"
+SRCREV = "8c8ae77e661bdba298f256948867d5a619bf1588"
 
 PV = "v2.1-9+git${SRCREV}"
 
