@@ -6,6 +6,7 @@ DEPENDS = "\
     apr-util-native \
     asciidoc-native \
     attr-native \
+    autoconf-archive-native \
     autoconf-native \
     autogen-native \
     automake-native \
@@ -40,6 +41,7 @@ DEPENDS = "\
     dosfstools-native \
     dtc-native \
     e2fsprogs-native \
+    efitools-native \
     elfutils-native \
     expat-native \
     file-native \
@@ -57,6 +59,7 @@ DEPENDS = "\
     gmp-native \
     gnome-common-native \
     gnu-config-native \
+    gnu-efi-native \
     gobject-introspection-native \
     gperf-native \
     gptfdisk-native \
@@ -66,6 +69,7 @@ DEPENDS = "\
     gtk-icon-utils-native \
     guile-native \
     harfbuzz-native \
+    help2man-native \
     icu-native \
     inputproto-native \
     intltool-native \
@@ -77,6 +81,7 @@ DEPENDS = "\
     libatomic-ops-native \
     libcroco-native \
     libffi-native \
+    libfile-slurp-perl-native \
     libfontenc-native \
     libice-native \
     libjpeg-turbo-native \
@@ -86,6 +91,7 @@ DEPENDS = "\
     libpthread-stubs-native \
     librsvg-native \
     libsdl-native \
+    libsign-native \
     libsm-native \
     libtool-native \
     libunistring-native \
@@ -147,6 +153,7 @@ DEPENDS = "\
     renderproto-native \
     rpm-native \
     rpmresolve-native \
+    sbsigntool-native \
     serf-native \
     sgml-common-native \
     sgmlspl-native \
