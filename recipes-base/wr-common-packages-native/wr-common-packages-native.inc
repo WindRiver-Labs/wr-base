@@ -21,6 +21,7 @@ DEPENDS = "\
     ca-certificates-native \
     cairo-native \
     cdrtools-native \
+    change-file-endianess-native \
     chrpath-native \
     cmake-native \
     cracklib-native \
