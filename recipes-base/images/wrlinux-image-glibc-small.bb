@@ -23,7 +23,3 @@ FEATURE_PACKAGES_ssh-sftp-servers = "\
     packagegroup-core-ssh-dropbear \
     openssh-sftp-server \
     "
-
-# allows root login without a password
-#
-IMAGE_FEATURES += "debug-tweaks"
