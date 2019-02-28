@@ -14,8 +14,8 @@ PACKAGE_INSTALL += "busybox"
 # Install mdadm and necessary kernel module to initramfs
 # to support boot from raid
 PACKAGE_INSTALL_append_intel-x86-64 = " \
-		mdadm \
-		kernel-module-nvme \
-		kernel-module-nvme-core \
-		kernel-module-efivars \
+		${@bb.utils.contains('DISTRO', 'wrlinux-installer', '', 'mdadm', d)} \
+		${@bb.utils.contains('DISTRO', 'wrlinux-installer', '', 'kernel-module-nvme', d)} \
+		${@bb.utils.contains('DISTRO', 'wrlinux-installer', '', 'kernel-module-nvme-core', d)} \
+		${@bb.utils.contains('DISTRO', 'wrlinux-installer', '', 'kernel-module-efivars', d)} \
 "
